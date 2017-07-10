@@ -41,7 +41,7 @@ describe("barclays", function(){
         warnOnUnregistered: false
     });
     mockery.registerMock('fs', fs);
-    barclays = require('../barclays');
+    barclays = require('../lib/barclays');
 
   });
 

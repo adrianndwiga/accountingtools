@@ -41,7 +41,7 @@ describe("santander", function(){
         warnOnUnregistered: false
     });
     mockery.registerMock('fs', fs);
-    santander = require('../santander');
+    santander = require('../lib/santander');
 
   });
 

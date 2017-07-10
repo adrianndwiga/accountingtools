@@ -45,7 +45,7 @@ describe("capitalone", function(){
         warnOnUnregistered: false
     });
     mockery.registerMock('fs', fs);
-    capitalone = require('../capitalone');
+    capitalone = require('../lib/capitalone');
 
   });
 
