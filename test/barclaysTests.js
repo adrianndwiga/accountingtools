@@ -28,7 +28,7 @@ describe("barclays", function(){
       return t;
     }();
 
-  var entries = [];
+  var entries = {list:[]};
   var dates = {
     start: "01/06/2017",
     end: "30/06/2017"
@@ -48,7 +48,7 @@ describe("barclays", function(){
   beforeEach(function(){
     // process.argv.push(inputFile);
     console.log(inputFile);
-    account = new barclays(entries, dates, includes, inputFile);
+    account = new barclays(entries, dates, includes, inputFile, function(){});
   });
 
   it("read file was called", function(){
@@ -65,23 +65,23 @@ describe("barclays", function(){
     });
 
     it("has one entry", function(){
-      assert.equal(entries.length, 1);
+      assert.equal(entries.list.length, 1);
     });
 
     it("has date", function(){
-      assert.equal(entries[0].date, "26/06/2017");
+      assert.equal(entries.list[0].date, "26/06/2017");
     });
 
     it("has description", function(){
-      assert.equal(entries[0].description, "SKY RESTAURANT        ON 23 JUN          BCC");
+      assert.equal(entries.list[0].description, "SKY RESTAURANT        ON 23 JUN          BCC");
     });
 
     it("has amount", function(){
-      assert.equal(entries[0].amount, "10.99");
+      assert.equal(entries.list[0].amount, "10.99");
     });
 
     afterEach(function(){
-      entries = [];
+      entries = {list: []};
     });
   });
 

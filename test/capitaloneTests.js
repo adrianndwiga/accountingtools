@@ -52,7 +52,7 @@ describe("capitalone", function(){
   beforeEach(function(){
     // process.argv.push(inputFile);
     // console.log(inputFile);
-    account = new capitalone(entries, dates, includes, inputFile);
+    account = new capitalone({list: entries}, dates, includes, inputFile, function(){});
   });
 
   it("read file was called", function(){

@@ -47,7 +47,7 @@ describe("santander", function(){
 
   beforeEach(function(){
     process.argv.push(inputFile);
-    account = new santander(entries, dates, includes, inputFile);
+    account = new santander({list: entries}, dates, includes, inputFile, function(){});
   });
 
   it("read file was called", function(){

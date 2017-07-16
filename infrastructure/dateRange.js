@@ -15,10 +15,11 @@ var _date = function(value){
 };
 
 var dateRange = function(dates){
-  // console.dir(dates);
   var t = {};
+
   t.start = new _date(dates.start);
   t.end = new _date(dates.end);
+
   t.isInDateRange = function(value){
     var v = new _date(value.trim());
     return v.toDate() >= this.start.toDate() && v.toDate() <= this.end.toDate();
