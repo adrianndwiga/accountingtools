@@ -1,4 +1,4 @@
-function getQueryParameters() {
+export function getQueryParameters() {
     let props = {
         start: '', 
         end: '',
@@ -17,4 +17,4 @@ function getQueryParameters() {
     return props;
 }
 
-module.exports = getQueryParameters;
+// module.exports = getQueryParameters;
