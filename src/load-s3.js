@@ -21,6 +21,7 @@ if (props.key.includes('barclays')) {
     });
 } else {
     santander(entries, { start: props.start, end: props.end }, props.includes, stream, (data) => {
+        console.log(JSON.stringify(data));
         console.log(data.list.map(s => s.amount).reduce((a, b) => a + b));
     });
 }
